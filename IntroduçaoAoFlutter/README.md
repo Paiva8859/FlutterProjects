@@ -1,5 +1,5 @@
 # Tutorial de instalação e preparação do ambiente de desenvolvimento Flutter
-## Flutter X Android SDK X BlueStacks
+## Flutter X Android SDK X BlueStacks 5
 ### Pré-requisitos:
 > Git instalado e configurado
 >
@@ -33,4 +33,39 @@
 ## Configurando o SDK Manager
 - Adicione a pasta bin das cmdline-tools às variáveis de ambiente. O caminho deve ficar como ``` C:\src\Android\sdk\cmdline-tools\latest\bin ```.
 ## Instalando o Android SDK
-- Com o SDK Manager instalado, inicie um terminal no cmd e execute o seguinte código: ``` sdkmanager "platform-tools" "platforms;android-30" ```
+- Com o SDK Manager instalado, inicie um terminal no cmd e execute o seguinte código: ``` sdkmanager "platform-tools" "platforms;android-30" "emulator"```. Este código instalará o necesssário para utilizar a versão 30 do Android SDK.
+- Aceite todos os termos para que a instalação seja realizada. Caso aconteça algum erro que te impeça de aceitar os termos ou você tenha recusado acidentalmente algum deles, execute o comando ```sdkmanager --licenses ``` para aceitá-los.
+# Configurando o Android SDK
+- Adicione o caminho para as pastas platform-tools e emulator às variáveis de ambiente. Os caminhos devem ficar como ``` C:\src\Android\sdk\platform-tools ``` e ``` C:\src\Android\sdk\emulator ```
+# Testando o Android SDK
+- Abra um novo terminal e execute o comando ``` adb version ``` para saber se o Android Debugger Bridge (Parte do Android SDK) foi instalado com sucesso.
+
+# BlueStacks 5
+## Instalando o BlueStacks 5
+
+## Configurando o BlueStacks 5
+- Nas configurações do BlueStacks 5, faça as seguintes alterações.
+1. Desempenho (Recomendado): Como utilizaremos o BlueStacks 5 apenas para emular as aplicações flutter, é recomendado modificar as configurações de desempenho da seguinte forma (Após salvar as mudanças, você precisará reiniciar o aplicativo):
+> Alocação de memória: 2-1GB
+>
+> Modo de desempenho: Equilibrado
+>
+> Taxa de quadros: 15
+>
+> Telefone: Altere o perfil do dispositivo como desejado, esse será o dispositivo emulado e que será exibido no VSCode
+2. Preferências (Recomendado): Desativar todas as opções de "Plataforma"
+3. Avançado (Obrigatório): Ativar a opção Android Debug Bridge (ADB), já que é essa opção que nos permite emular nossas aplicações Flutter com o BlueStacks 5.
+
+# Iniciando uma aplicação Flutter
+1. No VSCode, será necessário instalar a extensão "Flutter". Observa-se que ao instalar essa extensão, a extensão "Dart" (Linguagem utilizada pelo Flutter) também será instalada.
+2. Criar um projeto Flutter: 
+> Com o comando CTRL + SHIFT + P selecione criar um novo projeto Flutter (Flutter: New Project);
+> 
+> Selecione a opção "Application" (Cria uma aplicação com a estrutura básica de comentários e testes);
+>
+> Selecionea o diretório onde a aplicação será criada;
+>
+> Insira um nome para a aplicação;
+>
+> Aguarde até que sua aplicação seja criada.
+3. No projeto criado você pode encontrar a pasta ``` lib ```, na qual existe uma ``` main.dart ```, que é a classe principal da sua aplicação, que por parão já contém uma aplicação de teste. Ao executar esta aplicação, um novo dispositivo estará na lista para executar. Selecione-o, este é o dispositivo emulado pelo BlueStacks 5. Na primeira execução levará mais tempo, mas sua aplicação será executada no BlueStacks.
