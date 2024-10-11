@@ -25,5 +25,12 @@
 ---
 
 # Instalando e configurando o Android SDK
-## A instalação será feita utilizando o SDK Manager da Android.
+## Instalando o SDK Manager da Android.
 - Instale o SDK Manager a partir do site oficial da Android ``` https://developer.android.com/studio ```, na sessão "Command line tools only".
+- Na nossa pasta ``` C:\src ``` crie uma nova pasta chamada ``` Android ``` e dentro dela outra pasta chamada ``` sdk ```. O caminho deve ficar como ``` C:\src\Android\sdk ```
+- Extraia a pasta cmdline-tools para a pasta ```sdk```. O caminho deve ficar como ``` C:\src\Android\sdk\cmdline-tools ```.
+- Dentro da pasta cmdline-tools, crie uma nova pasta chamada latest e mova tudo o que há dentro da pasta cmdline-tools para lá. Essa pasta serve para controlar o versionamento do SDK Manager
+## Configurando o SDK Manager
+- Adicione a pasta bin das cmdline-tools às variáveis de ambiente. O caminho deve ficar como ``` C:\src\Android\sdk\cmdline-tools\latest\bin ```.
+## Instalando o Android SDK
+- Com o SDK Manager instalado, inicie um terminal no cmd e execute o seguinte código: ``` sdkmanager "platform-tools" "platforms;android-30" ```
