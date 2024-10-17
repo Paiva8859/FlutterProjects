@@ -4,7 +4,6 @@ import 'package:flutter/material.dart'; // Importa a biblioteca Flutter para con
 import 'package:provider/provider.dart'; // Importa a biblioteca Provider para gerenciamento de estado.
 import 'package:todo_app/providers/task_screen.dart';
 import 'providers/task_provider.dart'; // Importa o TaskProvider para gerenciamento da lista de tarefas.
-import 'task_screen.dart'; // Importa a tela de tarefas.
 
 void main() {
   // Função principal que inicia o aplicativo.
